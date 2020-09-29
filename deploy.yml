@@ -1,8 +1,8 @@
 ---
 - name: name of playbook
   hosts: all
-    connection: docker
-    tasks:
+  connection: docker
+  tasks:
     - name: Copy war-file from Jenkins to tomcat
       copy:
         src: /var/jenkins_home/workspace/trial_mustafprojekt_indu2/target/spring-boot-webblog-0.0.1-SNAPSHOT.war
