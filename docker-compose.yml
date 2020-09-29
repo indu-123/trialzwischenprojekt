@@ -19,7 +19,7 @@ services:
 
     tomcat:
         image: tomcat:latest
-        container_name: tomcat1
+        container_name: tomcat
         ports:
             - 8787:8080
         expose:
