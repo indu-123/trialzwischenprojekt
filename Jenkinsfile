@@ -21,7 +21,7 @@ pipeline {
             }
             stage("deploy War-file to tomcat") {
                 steps {
-                    echo 'artifact package'
+                    ansiblePlaybook colorized: true, disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory', playbook: 'deploy.yml'
             }
         }
  
