@@ -5,8 +5,8 @@ pipeline {
             stage("Run Docker-compose") {
                 steps {
                     sh "docker-compose up -d"
+                }
             }
-        }
             stage("WAR-File erstellen") {
                 agent {
                     docker {
@@ -22,6 +22,8 @@ pipeline {
             stage("deploy War-file to tomcat") {
                 steps {
                     ansiblePlaybook colorized: true, disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory', playbook: 'deploy.yml'
+                }
             }
         }
+}
  
