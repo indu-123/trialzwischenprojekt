@@ -20,9 +20,6 @@ services:
     tomcat:
         image: tomcat:latest
         container_name: tomcat
-        environment::
-            - TOMCAT_USERNAME=admin
-            - TOMCAT_PASSWORD=admin
         ports:
             - 8787:8080
         expose:
