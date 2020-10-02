@@ -6,12 +6,12 @@ networks:
 services:
     mysql:
         image: mysql:latest
-        container_name: mysql
+        container_name: mysql1
         environment:
             - MYSQL_ROOT_PASSWORD=root
             - MYSQL_USER=root
         ports:
-            - 3306:3306
+            - 3000:3306
         expose:
             - 3306
         networks:
